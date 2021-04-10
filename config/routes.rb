@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root 'welcome#index'
 
-  autenticated :user do
+  authenticated :user do
     root "docs#index", as: "authenticated_root"
   end
 
